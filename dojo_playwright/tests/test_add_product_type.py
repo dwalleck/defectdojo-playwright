@@ -1,8 +1,8 @@
 import re
 from playwright.sync_api import Page, expect
-from login_page import LoginPage
-from dashboard_page import DashboardPage
-from add_project_type_page import AddProductTypePage
+from dojo_playwright.pages.login_page import LoginPage
+from dojo_playwright.pages.dashboard_page import DashboardPage
+from dojo_playwright.pages.add_project_type_page import AddProductTypePage
 
 
 def test_add_new_product(page: Page):

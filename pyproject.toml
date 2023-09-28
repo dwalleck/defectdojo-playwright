@@ -1,0 +1,7 @@
+[project]
+name = 'dojo_playwright'
+version = '1.0.0'
+dependencies = [
+    'pytest',
+    'playwright'
+]

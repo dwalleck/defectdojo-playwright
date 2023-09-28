@@ -1,0 +1,12 @@
+pyproject.toml
+dojo_playwright.egg-info/PKG-INFO
+dojo_playwright.egg-info/SOURCES.txt
+dojo_playwright.egg-info/dependency_links.txt
+dojo_playwright.egg-info/requires.txt
+dojo_playwright.egg-info/top_level.txt
+dojo_playwright/pages/add_project_page.py
+dojo_playwright/pages/add_project_type_page.py
+dojo_playwright/pages/dashboard_page.py
+dojo_playwright/pages/login_page.py
+dojo_playwright/tests/test_add_product.py
+dojo_playwright/tests/test_add_product_type.py
