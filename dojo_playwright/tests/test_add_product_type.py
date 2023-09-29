@@ -9,7 +9,7 @@ def test_add_new_product(page: Page):
     # Login
     login_page = LoginPage(page)
     login_page.navigate()
-    login_page.login('admin', '1Defectdojo@demo#appsec')
+    login_page.login("admin", "1Defectdojo@demo#appsec")
 
     # Go to the add product page
     dashboard_page = DashboardPage(page)
@@ -18,7 +18,6 @@ def test_add_new_product(page: Page):
 
     # Fill out the new product type and submit
     add_proj_type_page = AddProductTypePage(page)
-    add_proj_type_page.name.fill('A Playwright Project')
-    add_proj_type_page.description.fill('A Playwright Project Description')
+    add_proj_type_page.name.fill("A Playwright Project")
+    add_proj_type_page.description.fill("A Playwright Project Description")
     add_proj_type_page.submit_button.click()
-

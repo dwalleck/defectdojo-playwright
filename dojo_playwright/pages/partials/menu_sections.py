@@ -1,46 +1,54 @@
 from playwright.sync_api import Page
 
-class NavBar:
 
+class ProjectsMenu:
     def __init__(self, page: Page):
-
-        # Products
-        self.projects_menu = page.get_by_label("Products")
+        self.section_icon = page.get_by_label("Products")
         page.get_by_role("link", name="All Products")
         page.get_by_role("link", name="Add Product", exact=True)
         page.get_by_role("link", name="All Product Types")
         page.get_by_role("link", name="Add Product Type")
 
-        # Engagements
-        self.engagements_menu = page.get_by_label("Engagements")
+
+class EngagementsMenu:
+    def __init__(self, page: Page):
+        self.section_icon = page.get_by_label("Engagements")
         page.get_by_role("link", name="Active Engagements")
         page.get_by_role("link", name="All Engagements")
         page.get_by_role("link", name="Engagements by Product")
         page.get_by_role("link", name="Test Types")
         page.get_by_role("link", name="Environments")
 
-        # Findings
-        self.findings_menu = page.get_by_label("Findings")
+
+class FindingsMenu:
+    def __init__(self, page: Page):
+        self.section_icon = page.get_by_label("Findings")
         page.get_by_role("link", name="Open Findings")
         page.get_by_role("link", name="All Findings")
         page.get_by_role("link", name="Closed Findings")
         page.get_by_role("link", name="Risk Accepted Findings")
         page.get_by_role("link", name="Finding Templates")
 
-        # Components
-        self.components_menu = page.get_by_label("Components")
+
+class ComponentsMenu:
+    def __init__(self, page: Page):
+        self.section_icon = page.get_by_label("Components")
         page.get_by_role("link", name="All Components")
 
-        # Endpoints
-        self.endpoints_menu = page.get_by_label("Endpoints")
+
+class EndpointsMenu:
+    def __init__(self, page: Page):
+        self.section_icon = page.get_by_label("Endpoints")
         page.get_by_role("link", name="All Endpoints")
         page.get_by_role("link", name="All Hosts")
         page.get_by_role("link", name="Vulnerable Endpoints")
         page.get_by_role("link", name="Vulnerable Hosts")
         page.get_by_role("link", name="Migrate Endpoints")
 
-        # Metrics
-        self.metrics_menu = page.get_by_label("Metrics")
+
+class MetricsMenu:
+    def __init__(self, page: Page):
+        self.section_menu = page.get_by_label("Metrics")
         page.get_by_role("link", name="Metrics Dashboard")
         page.get_by_role("link", name="Critical Product Metrics")
         page.get_by_role("link", name="Product Type Metrics")
@@ -48,17 +56,23 @@ class NavBar:
         page.get_by_role("link", name="Simple Metrics")
         page.get_by_role("link", name="Engineer Metrics")
 
-        # Users
-        self.users_menu = page.get_by_label("Users")
+
+class UsersMenu:
+    def __init__(self, page: Page):
+        self.section_menu = page.get_by_label("Users")
         page.locator("#side-menu").get_by_role("list").get_by_role("link", name="Users")
         page.get_by_role("link", name="Groups")
 
-        # Questionaries
-        self.questionaries_menu = page.get_by_label("Questionnaires")
+
+class QuestionnairesMenu:
+    def __init__(self, page: Page):
+        self.section_menu = page.get_by_label("Questionnaires")
         page.get_by_role("link", name="All Questionnaires")
         page.get_by_role("link", name="All Questions")
 
-        # Tool Type
+
+class ToolsMenu:
+    def __init__(self, page: Page):
         self.tool_type_menu = page.get_by_label("Configuration")
         page.get_by_role("link", name="Announcement")
         page.get_by_role("link", name="Credential Manager")
